@@ -33,8 +33,19 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
-
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+.grid__column-10{
+    padding-left: 2px;
+    padding-right: 12px;
+    width: 83.3334%;
+}
 /* Animation */
 @keyframes fadeIn{
     from{
@@ -47,7 +58,7 @@ html{
 
 /* button style */
 .btn{
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     text-decoration: none;
     border: none;
@@ -58,7 +69,7 @@ html{
     cursor: pointer;
     color: var(--text-color);
     background-color: var(--white-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -85,4 +96,50 @@ html{
 .auth-form__socials-icon,
 .auth-form__socials-facebook{
     color: var(--white-color);
+}
+/*  */
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select-input__label{
+    font-size: 1.4rem;
+}
+.select-input__icon{
+    font-size: 1.4rem;
+    color: #646464;
+    position: relative;
+    top: 2px;
+
+}
+.select-input:hover .select-filter__list{
+    display: block;
+}
+.select-filter__list{
+    position: absolute;
+    left: 0;
+    top: 26px;
+    right: 0;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+.select-filter__link{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+.select-filter__link:hover{
+    color: var(--primary-color);
 }
